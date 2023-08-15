@@ -35,3 +35,138 @@ C: Consistency ---> Consistency makes sure that the data is valid before 							
 I: Isolation----> Isolation ensures that multiple transactions can occur 								simultaneously without interfering with each other.
 
 D: Durablity---> durability ensures that once a transaction is 											committed, it is permanent. Even if the system fails, 									the changes in transactions are stored permanently.
+
+6. What is ER Diagram? 
+An Entity Relationship (ER) Diagram is a type of flowchart that illustrates how “entities” such as people, objects or concepts relate to each other within a system.
+
+7. what is generalization, specialization, aggregation?
+
+-->Generalization: Generalization is the process of extracting common properties from one or more than one set of entities and create a generalized entity from it..
+
+this is bottom up approach in which two or more entites can be combined to form a higher level entity if they have some attributes in common..
+
+Ex: car,Bus,bike etc. have common propertie that they are vehical.
+
+-->Specialization: Specialization is opposite of Generalization.
+
+In Specialization, an entity is broken down into sub-entities based on their characteristics.
+
+that's why this is top down approach where higher level entity is specialized into two or more lower level entites.
+
+Ex: Employee can be define as officer, teller, secretary etc.
+
+--> Aggregation: Aggregation is used when we need to express a relationship among relationships
+
+Aggregation is an abstraction trough which relationships are treated as higher level entities.
+
+video: https://youtu.be/1G4agXWNr_M
+
+8. What is codd's Rule: Codd's rule in DBMS also known as Codd's 12 rules/commandments is a set of thirteen rules (numbered 0 to 12) that define a database to be a correct Relational Database Management System (RDBMS). If a database follows Codd's 12 rules, it is called a True relational database management system.
+
+Rules: total 13 0 - 12
+
+0. Foundation rule: If a system is said to be an RDBMS then the database should be managed using only relational capabilites.
+
+1. Information Rule - (should store all data in tabular form called cell)
+
+2. Guarantied Access - (should every datum accessed by Table name + primary key(Row) + Attribute(column) 
+
+Ex: select age(attribute_column) from student(table_name) where rollno = 10(primary_key)
+
+3. Systmatic Treatment of Null - (should handled consistently) and primary key must not be null and expression on null must give null.
+
+4. Active online catalogue(database dictionary must have description of database)
+
+5. Powerful Language (like SQL provide all manners of access to data)
+
+6. View Updation - (virutal table)
+
+7. Relational level operation - (like must be Insert, Delete, Update operations at each level of relations. and Set opeation like Union, Intersection and minus should also be supported.)
+
+8. Physical Data Independence - (The physical storage of data should not matter to the system or if we moved from one to another storage should not affected)
+
+9. Logical Data Independence - (not affected when changes apply on logical view like table name change or add columns or etc)
+
+10. Integrity Independence - (Constraints, condition or triggers)
+
+11. Distribution Independence - (if database distribute accros network then it independent no affect to user exp)
+
+12. Non-subversion rule -( if we got acces then also should not break the integrity rules like price value store between 100 - 1000 than we should not change while we access)
+
+video: https://youtu.be/RtYyY5RreBs
+
+9. What is key?
+Key, is a key part of relational database
+
+purpose of key: 
+-->Key is used to uniqly identify any record or row of data from the table.
+
+-->I is also used to establish and identify relationship between tables.
+
+keys: Super key, Candidate Keys, Primary Keys and Foreign Keys, Alternate key, Composite key.
+
+
+--> super key:super key is superset of a candidate key. table can have many super key.
+
+--> candidate key: subset of super key (least combination of field), it must contain unique value, it must not contains null value
+
+--> primary key: primary key must contains unique value, must not contains null value
+
+--> Foreign Key: a key used to linke tables together. an attributes in one table that refers to the primary key in another tables. it can keep null value, not restriction that it have uniqe value.
+
+--> Alternate key: out of all candidate keys, only one gets select as primary key, remaining keys are known as alternate keys.
+
+--> Composite key: make key including more than one attribute.
+
+10. Normalization in DB?
+
+the normalization process was first proposed by Codd in 1972 to make databse design better.
+
+--> types of Norm..
+First NormalForm 1NF
+Second NormalForm 2NF
+Third NormalForm 3NF
+
+1NF: Atomic (minimize Redundancy)
+
+2NF: 1NF + must be no partial depencencies on primary key. if find partiality then break tables.
+
+Video: https://youtu.be/OKekf8ZrAPM
+
+3NF: 2NF + should direct depenecy of non prime attribute on primay attribute.
+
+11. what is SQL?
+
+SQL is Structured Query Language?
+
+types of SQL command.
+
+--> DDL: Data Definition Language (work on table structure or formate) 
+
+command: create, drop, truncate, alter
+
+--> DML: Data Manipulation Language (work on stored data in table)
+
+command: insertion, updating, deleting, select
+
+12. What is Integrity Constraints ?
+Constraints Introduction
+NOT NULL Constraint
+Primary Key Constraints
+Foreign Key
+Check Constraints
+Default and Autoincrement constraints.
+
+13. What is Join?
+Join is clause it is use to combine two or more tables
+Join clause is used in SQL to combine two or more tables basesd on condition
+
+Types of JOIN:
+--> Inner join: both table record match 
+--> Right join: right table all but left table only matched record
+--> Left join: left table all but right table only matched record
+--> Full join: all record come what ever record match or not in tables.
+
+Ex: Select * from Table_1 join_type JOIN Table_2 on Table_1.id = Table_2.id;
+
+14. Group By and Having clause.
