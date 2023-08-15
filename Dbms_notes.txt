@@ -1,0 +1,37 @@
+1. what is database?
+
+A Database Management System (DBMS) is a software system that is designed to manage and organize data in a structured manner. It allows users to create, modify, and query a database, as well as manage the security and access controls for that database.
+
+2. Characterstics of DBMS?
+
+A database management system is able to store any kind of data in a database.
+
+The database management system has to support ACID (atomicity, consistency, isolation, durability) properties.
+
+The Database management system allows so many users to access databases at the same time.
+
+Backup and recovery are the two main methods which allow users to protect the data from damage or loss.
+
+It also provides multiple views for different users in a single organization.
+
+It follows the concept of normalization which is helpful to minimize the redundancy of a relation.
+
+It also provides users query language, helpful to insert, retrieve, update, and delete the data in a database.
+
+3. DBMS vs RDBMS
+
+An RDBMS represents data in the form of tables, with rows and columns, and allows users to create relationships between these tables using keys. In contrast, a DBMS may use a variety of data models, such as the hierarchical model or the network model, to represent data.
+
+4. what is database schema?
+
+A database schema defines how data is organized within a relational database; this is overall of logical constraints such as, table names, fields, data types, and the relationships between these entities.
+
+5. ACID property in DBMS?
+
+A: Atomicity ---> Atomicity ensures that the transaction is completed in 								its entirety or not at all because transactions don't happen partially.
+
+C: Consistency ---> Consistency makes sure that the data is valid before 									and after the transaction.
+
+I: Isolation----> Isolation ensures that multiple transactions can occur 								simultaneously without interfering with each other.
+
+D: Durablity---> durability ensures that once a transaction is 											committed, it is permanent. Even if the system fails, 									the changes in transactions are stored permanently.

@@ -1,0 +1,27 @@
+select count(*) fromm Student group by branch...wrong
+
+-->select branch,count(*) from Student group by branch
+
+--> select gender,count(*) from Student group by gender
+
+-->select gender,avg(perc) from Student group by gender
+
+-->select gender, max(perc) from Student group by gender
+
+-->select gender, min(perc) from Student group by gender.
+
+Having..
+
+-->select brance from Student group by branch having count(branch) =1...wrong
+
+-->select branch, count(branch) from Student group by branch having count(sid) > 1
+
+-->select branch,min(per) from Student group by branch having min(per) > 70;
+
+-->select branch, max(per) from Student group by branch having max(per) > 90
+
+
+
+
+
+
