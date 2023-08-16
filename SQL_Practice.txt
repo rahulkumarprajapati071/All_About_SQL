@@ -1,1 +1,35 @@
 httpssqlzoo.netwikiSQL_Tutorial
+
+
+-- select last_name,salary from employees where salary not between 5000 and 10000
+-- select last_name, department_id from employees where department_id = 60 or department_id = 100 order by last_name asc
+-- select last_name , salary as Monthly_Salary, department_id from employees as Employee where department_id = 60 or department_id = 90 and salary between 5000 and 12000
+-- select last_name , salary, commission_pct from employees where commission_pct is null order by salary desc
+-- select last_name, job_id, salary from employees where job_id = "it_prog" or job_id = "fi_account" and salary not in (2500,3500,7000)
+-- select last_name , salary, commission_pct from employees where commission_pct = 20
+-- select employee_id, last_name, salary, round(salary + salary * 155/1000) as New_Salary from employees 
+-- select employee_id, last_name, salary, round(salary + salary * 155/1000) as New_Salary , round(salary + salary * 155/1000 - salary) as Increase from employees
+-- select employee_id, last_name, salary * 3 as Dream_Salaries from employees
+-- select last_name , manager_id from employees where manager_id != 103
+-- select * from employees where manager_id between 100 and 103
+-- select * from employees where commission_pct is null
+-- select * from employees join departments on employees.manager_id = departments.manager_id and employees.manager_id is not null
+-- select * from employees where manager_id != 200
+-- select sum(salary) from employees where department_id = 60
+-- select round(max(salary) - min(salary)) as diff from employees
+-- select count(job_id) from employees
+-- select count(*),count(manager_id) from employees 
+-- select * from employees where first_name like '%n'
+-- select * from employees where first_name like "A%"
+-- select * from employees where first_name like "A%r"
+-- select * from employees where first_name like "A____%"
+-- select * from employees where first_name like "%ar%"
+-- select * from employees where first_name like "%ara"
+-- select * from departments where manager_id in (200,1700) and department_name like "%tr%"
+-- select employee_id, length(last_name) as length_Of_last_name , manager_id, department_id, upper(first_name),hire_date from employees...
+-- select last_name , first_name, manager_id, email from employees where email between "E" and "S"...
+-- select last_name from employees where last_name like "__a%"
+-- select last_name from employees where last_name like "%a%" and last_name like "%e%"......
+-- select last_name , length(last_name) from employees where last_name like "J%" or last_name like "A%" or last_name like "M%" order by last_name desc
+
+
